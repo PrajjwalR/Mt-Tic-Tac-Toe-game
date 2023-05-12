@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: rgb(146, 5, 35);
+    color: rgb(255, 255, 255);
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+display: flex;
+justify-content: center;
+margin-top: 50px;
+
+}
+.container{
+display: grid;
+grid-template-rows: repeat(3, 10vw);
+grid-template-columns: repeat(3, 10vw);
+font-family: 'Roboto', sans-serif;
+position: relative;
+}
+.line{
+    background-color: black;
+    width: 0;
+    height:3px;
+    position: absolute;
+    background-color: rgb(153, 0, 77);
+    transition: width 1s ease-in-out;
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.box:hover{
+    background-color: rgb(243, 185, 185);
+    cursor: pointer;
+    
+}
+.gameInfo{
+padding: 0 34px;
+font-family: 'Merriweather', serif;
+}
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.info{
+    font-family: 'Merriweather', serif;
+    font-size: 25px;
+}
+#reset{
+margin: 0 20px;
+padding: 5px 15px 5px 15px;
+background-color: rgb(245, 119, 146);
+border-color: rgb(240, 120, 120);
+border-radius: 10px;
+cursor: pointer;
+font-family: 'Roboto', sans-serif;
+}
+
+
+@media screen and (max-width: 800px){
+   
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 35px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+}
+@media screen and (max-width: 300px){
+    .box{
+        border-radius: 5px;
+    }
+}
+@media screen and (max-width: 100px){
+    .box{
+        border-radius: 3px;
+    }
+}
+
+/* Utility Classes */
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
